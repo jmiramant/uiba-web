@@ -1,5 +1,5 @@
 ---
-title: React.js Starter Kit
+title: Ubia Web App
 component: ContentPage
 ---
 ### Runtime Components
@@ -13,7 +13,3 @@ component: ContentPage
 [Webpack](http://webpack.github.io/) - Compiles front-end source code into modules / bundles
 
 [BrowserSync](http://www.browsersync.io/) - A lightweight HTTP server for development
-
-### Fork me on GitHub
-
-[github.com/kriasoft/react-starter-kit](https://github.com/kriasoft/react-starter-kit)

@@ -10,14 +10,14 @@ export const analytics = {
 
   // https://analytics.google.com/
   google: {
-    trackingId: process.env.GOOGLE_TRACKING_ID, // UA-XXXXX-X
+    trackingId: process.env.GOOGLE_TRACKING_ID || 'UA-81887884-1', // UA-XXXXX-X
   },
 
 };
 
 export const auth = {
 
-  jwt: { secret: process.env.JWT_SECRET || 'React Starter Kit' },
+  jwt: { secret: process.env.JWT_SECRET || 'Uiba Web' },
 
   // https://developers.facebook.com/
   facebook: {
@@ -29,12 +29,6 @@ export const auth = {
   google: {
     id: process.env.GOOGLE_CLIENT_ID || '251410730550-ahcg0ou5mgfhl8hlui1urru7jn5s12km.apps.googleusercontent.com',
     secret: process.env.GOOGLE_CLIENT_SECRET || 'Y8yR9yZAhm9jQ8FKAL8QIEcd',
-  },
-
-  // https://apps.twitter.com/
-  twitter: {
-    key: process.env.TWITTER_CONSUMER_KEY || 'Ie20AZvLJI2lQD5Dsgxgjauns',
-    secret: process.env.TWITTER_CONSUMER_SECRET || 'KTZ6cxoKnEakQCeSpZlaUCJWGAlTEBJj0y2EMkUBujA7zWSvaQ',
   },
 
 };
