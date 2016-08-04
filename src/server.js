@@ -9,6 +9,7 @@ import jwt from 'jsonwebtoken';
 import React from 'react';
 import ReactDOM from 'react-dom/server';
 import Html from './components/Html';
+import mongoose from 'mongoose';
 import { ErrorPage } from './routes/error/ErrorPage';
 import errorPageStyle from './routes/error/ErrorPage.css';
 import UniversalRouter from 'universal-router';
@@ -23,6 +24,9 @@ import { setRuntimeVariable } from './actions/runtime';
 import { port, auth } from './config';
 
 const app = express();
+
+// create a moogoose db connection
+let db = mongoose.connection;
 
 //
 // Tell any CSS tooling (such as Material UI) to use all vendor prefixes if the
@@ -149,6 +153,7 @@ app.use((err, req, res, next) => { // eslint-disable-line no-unused-vars
 /* eslint-disable no-console */
 models.sync().catch(err => console.error(err.stack)).then(() => {
   app.listen(port, () => {
+    mongoose.connect('mongodb://localhost/uiba');
     console.log(`The server is running at http://localhost:${port}/`);
   });
 });

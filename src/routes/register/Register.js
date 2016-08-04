@@ -1,7 +1,10 @@
 'use strict';
 import React, { PropTypes } from 'react';
+import { reduxForm } from 'redux-form'
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Register.css';
+export const fields = [ 'firstName', 'lastName', 'email', 'password', 'passwordConf' ]
+
 
 const title = 'New User Registration';
 

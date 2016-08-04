@@ -3,6 +3,7 @@ import {
   GraphQLSchema as Schema,
   GraphQLObjectType as ObjectType,
 } from 'graphql';
+import mongoose from 'mongoose';
 
 import me from './queries/me';
 import content from './queries/content';

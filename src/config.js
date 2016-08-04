@@ -25,6 +25,12 @@ export const auth = {
     secret: process.env.FACEBOOK_APP_SECRET || 'a970ae3240ab4b9b8aae0f9f0661c6fc',
   },
 
+  //https://www.linkedin.com/developer/
+  linkedin: {
+    id: process.env.LINKEDIN_APP_ID || '7502url4wogimg',
+    secret: process.env.LINKEDIN_APP_SECRET || 'Cbt1RZqeunrzRXP3',
+  },
+
   // https://cloud.google.com/console/project
   google: {
     id: process.env.GOOGLE_CLIENT_ID || '251410730550-ahcg0ou5mgfhl8hlui1urru7jn5s12km.apps.googleusercontent.com',
