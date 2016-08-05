@@ -1,31 +1,18 @@
-'use strict';
-import DataType from 'sequelize';
-import Model from '../sequelize';
+import mongoose from 'mongoose'
+import timestamps from 'mongoose-timestamp';
 
-const User = Model.define('User', {
-
-  id: {
-    type: DataType.UUID,
-    defaultValue: DataType.UUIDV1,
-    primaryKey: true,
-  },
-
-  email: {
-    type: DataType.STRING(255),
-    validate: { isEmail: true },
-  },
-
-  emailConfirmed: {
-    type: DataType.BOOLEAN,
-    defaultValue: false,
-  },
-
-}, {
-
-  indexes: [
-    { fields: ['email'] },
-  ],
-
+const userSchema = mongoose.Schema({
+  name: String,
+  username: String,
+  email: String,
+  password: String,
+  image: String,
+  admin: Boolean,
+  isEmailVerified: Boolean,
+  verifyEmailToken: String,
+  verifyEmailTokenExpires: Date
 });
 
-export default User;
+userSchema.plugin(timestamps);
+
+export default mongoose.model('User', userSchema);

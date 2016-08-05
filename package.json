@@ -12,8 +12,10 @@
     "npm": ">=3.3 <4"
   },
   "dependencies": {
+    "axios": "^0.13.1",
     "babel-polyfill": "6.9.1",
     "babel-runtime": "6.9.2",
+    "bcrypt": "^0.8.7",
     "bluebird": "^3.4.1",
     "body-parser": "^1.15.2",
     "classnames": "2.2.5",
@@ -32,7 +34,9 @@
     "isomorphic-style-loader": "1.0.0",
     "jsonwebtoken": "^7.0.1",
     "markdown-it": "^7.0.0",
+    "material-ui": "^0.15.3",
     "mongoose": "^4.5.8",
+    "mongoose-timestamp": "^0.6.0",
     "node-fetch": "1.5.3",
     "normalize.css": "4.1.1",
     "passport": "0.3.2",
@@ -42,6 +46,7 @@
     "react-dom": "15.1.0",
     "react-redux": "^4.4.5",
     "redux": "^3.4.0",
+    "redux-form": "^5.3.2",
     "redux-thunk": "^2.1.0",
     "sequelize": "^3.23.4",
     "source-map-support": "0.4.0",
